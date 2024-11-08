@@ -1,0 +1,43 @@
+<!-- Start Page Title Area -->
+<section class="page-title-banner1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <img src="assets/images/SkillLens_DigitalMar.png" alt="careers">
+            </div>
+        </div>
+    </div>
+
+    
+</section>
+<div class="container  is-sticky">
+    <div class="row is-sticky" style="background-color: beige; padding: 10px 0px;">
+        <div class=" col-6 col-md-2 ss">
+            <a routerLink="./" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">What You Learn</a>
+        </div>
+        <div class="col-6 col-md-2 ss">
+            <a routerLink="./about-trainer" routerLinkActive="active">About Trainer</a>
+        </div>
+        <div class="col-6 col-md-3 ss">
+            <a routerLink="./career-journey" routerLinkActive="active">Career Journey</a>
+        </div>
+        <div class="col-6 col-md-3 ss">
+            <a routerLink="./our-training-methodology" routerLinkActive="active">Training Methodology</a>
+        </div>
+        <div class="col-6 col-md-2 ss">
+            <a routerLink="./who-can-join" routerLinkActive="active">Who Can Join?</a>
+        </div>
+    </div>
+</div>
+
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-9 shadow-lg p-3 mb-5 bg-body rounded">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+            <app-enquiry-form></app-enquiry-form>
+        </div>
+    </div>
+</div>

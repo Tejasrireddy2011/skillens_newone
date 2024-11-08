@@ -1,0 +1,22 @@
+.active {
+    color: #ff851b!important;
+    font-weight: bold !important;
+}
+
+.is-sticky {
+    top: 90px;
+    position: sticky;
+    z-index: 99;
+}
+
+.ss {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (min-width:320px) and (max-width:767px) {
+    .ss {
+        display: flex;
+        justify-content: start;
+    }
+}

@@ -1,0 +1,154 @@
+<!-- Start Navbar Area -->
+<header id="header">
+    <div class="crake-nav marketing-navbar">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <a class="navbar-brand" routerLink="/">
+                    <img src="assets/Images_jpg/SkillLens_Logo1.jpeg" alt="SkillLens_Logo1"
+                        class="logo_main img-responsive">
+                </a>
+
+                <!-- <button class="navbar-toggler" #btntoggle type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+
+                <button class="navbar-toggler" type="button" #btntoggle data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav ms-auto">
+                        <!-- <li><a routerLink="/" routerLinkActive="active"
+                                [routerLinkActiveOptions]="{exact: true}">Home</a></li> -->
+                        <!-- <li><a routerLink="/about-us" routerLinkActive="active">About Us</a></li> -->
+
+                        <li class="nav-item dropdown">
+                            <a href="javascript:void(0)" class="nav-link dropdown-toggle"
+                                [ngClass]="{'active': c5.isActive || c6.isActive|| c7.isActive|| c8.isActive || c9.isActive}"
+                                data-bs-toggle="dropdown">Our
+                                Courses</a>
+                            <ul class="dropdown_menu dropdown-menu">
+                                <li class="nav-item"><a routerLink="/dotnet" [routerLinkActiveOptions]="{exact: true}"
+                                        routerLinkActive="active" #c5="routerLinkActive">.Net Full Stack</a></li>
+
+                                <li class="nav-item"><a routerLink="/java" routerLinkActive="active"
+                                        #c6="routerLinkActive">Java
+                                        Full Stack</a></li>
+
+                                <li class="nav-item"><a routerLink="/python" routerLinkActive="active"
+                                        #c7="routerLinkActive">Python Full Stack</a></li>
+
+                                <li class="nav-item"><a routerLink="/testing" routerLinkActive="active"
+                                        #c8="routerLinkActive">Testing Tools</a></li>
+
+                                <li class="nav-item"><a routerLink="/aws" routerLinkActive="active"
+                                        #c8="routerLinkActive">AWS</a></li>
+
+                                <li class="nav-item"><a routerLink="/sql-server" routerLinkActive="active"
+                                        #c9="routerLinkActive">SQL Server</a></li>
+
+                                <li class="nav-item"><a routerLink="/oracle" routerLinkActive="active"
+                                        #c9="routerLinkActive">Oracle DBA</a></li>
+
+                                <li class="nav-item"><a routerLink="/webdevelopment-angular" routerLinkActive="active"
+                                        #c8="routerLinkActive">Web Development - Angular</a></li>
+
+                                <li class="nav-item"><a routerLink="/webdevelopment-reactjs" routerLinkActive="active"
+                                        #c9="routerLinkActive">Web Development - React JS</a></li>
+
+                                <li class="nav-item"><a routerLink="/digital-marketing" routerLinkActive="active"
+                                        #c8="routerLinkActive">Digital Marketing</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item dropdown">
+                            <a href="javascript:void(0)" class="nav-link dropdown-toggle"
+                                [ngClass]="{'active': c1.isActive || c2.isActive|| c3.isActive|| c4.isActive}"
+                                data-bs-toggle="dropdown">Our
+                                Services</a>
+
+                            <ul class="dropdown_menu dropdown-menu">
+                                <li class="nav-item"><a routerLink="/it-training" routerLinkActive="active"
+                                        #c1="routerLinkActive">IT Training</a></li>
+
+                                <li class="nav-item"><a routerLink="/internship" routerLinkActive="active"
+                                        #c2="routerLinkActive">Internships</a></li>
+
+                                <li class="nav-item"><a routerLink="/workshops" routerLinkActive="active"
+                                        #c3="routerLinkActive">Workshops</a></li>
+
+                                <li class="nav-item"><a routerLink="/it-development" routerLinkActive="active"
+                                        #c4="routerLinkActive">Development</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- <li><a routerLink="/gallery" routerLinkActive="active">Gallery</a></li> -->
+                        <li><a routerLink="/placement-preparation" routerLinkActive="active">Placement Preparation </a>
+                        </li>
+
+                        <!-- <li class="nav-item dropdown">
+                            <a href="javascript:void(0)" class="nav-link dropdown-toggle"
+                                data-bs-toggle="dropdown">Blog</a>
+
+                            <ul class="dropdown_menu dropdown-menu">
+                                <li class="nav-item"><a routerLink="/blog" routerLinkActive="active"
+                                        class="nav-link">Blog</a></li>
+
+                                <li class="nav-item"><a routerLink="/blog-details" routerLinkActive="active"
+                                        class="nav-link">Blog Details</a></li>
+                            </ul>
+                        </li> -->
+
+                        <li class="nav-item"><a routerLink="contact-us" routerLinkActive="active">Contact</a></li>
+
+
+
+                        <li class="nav-item dropdown">
+                            <a href="javascript:void(0)" class="nav-link dropdown-toggle"
+                                [ngClass]="{'active': c1.isActive || c2.isActive|| c3.isActive|| c4.isActive}"
+                                data-bs-toggle="dropdown">
+                                Jobs Hub</a>
+
+                            <ul class="dropdown_menu dropdown-menu">
+                                <li class="nav-item"><a href="https://t.me/itjobshyderabad9" target="_blank"
+                                        routerLinkActive="active" #c1="routerLinkActive">IT Jobs
+                                        Hyderabad </a></li>
+
+                                <li class="nav-item"><a href="https://t.me/nonitjobshyderabad" target="_blank"
+                                        routerLinkActive="active" #c2="routerLinkActive">NON IT Jobs
+                                        Hyderabad </a></li>
+
+                                <li class="nav-item"><a href="https://t.me/hyderabadjobs99" target="_blank"
+                                        routerLinkActive="active" #c3="routerLinkActive"> Hyderabad
+                                        Jobs </a></li>
+
+                                <li class="nav-item"><a href="https://t.me/freshersjobshyderabad9" target="_blank"
+                                        routerLinkActive="active" #c4="routerLinkActive"> Freshers Jobs
+                                        Hyderabad </a></li>
+
+                                <li class="nav-item"><a href="https://chat.whatsapp.com/KpmkNQo1QQW0a4SpvIzIcm"
+                                        target="_blank" routerLinkActive="active" #c3="routerLinkActive"> Hyderabad Jobs
+                                        - WA </a></li>
+
+                                <li class="nav-item"><a href="https://api.whatsapp.com/send?phone=917013814324&text="
+                                        target="_blank" routerLinkActive="active" #c4="routerLinkActive">Reach US
+                                        <img src="../../../assets/images/SkillLens_Whatsapp.webp" alt="whatsapp"
+                                            height="30px" width="30px"></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<!-- End Navbar Area -->
+
+<!-- <app-sidebar></app-sidebar> -->

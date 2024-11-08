@@ -1,0 +1,27 @@
+<div class="sub_li fome-g shadow-lg p-3 mb-5 bg-body rounded w-100 ms-auto ptb-100">
+    <h6><b>Join Now</b></h6>
+    <form name="contactForm" #contactForm="ngForm" (ngSubmit)="contactForm.valid && submitContact(contactForm)">
+        <div class="mb-3">
+            <input type="text" name="fullName" class="form-control" #fullName="ngModel"
+                [(ngModel)]="contactObj.fullName" required placeholder="Name">
+            <small *ngIf="(fullName.invalid && contactForm.submitted) || (fullName.touched && fullName.invalid)">Full
+                Name is required</small>
+        </div>
+        <div class="mb-3">
+            <input type="email" name="email" #email="ngModel" class="form-control" [(ngModel)]="contactObj.email"
+                required placeholder="Email">
+            <small *ngIf="(email.invalid && contactForm.submitted) || (email.touched && email.invalid)">
+                Email is required</small>
+        </div>
+        <div class="mb-3">
+            <input type="text" name="mobile" #mobile="ngModel" class="form-control" [(ngModel)]="contactObj.mobile"
+                required placeholder="Phone" appMobileValidator>
+            <small *ngIf="(mobile.invalid && contactForm.submitted) || (mobile.touched && mobile.invalid)">
+                Mobile number is invalid</small>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-sm">
+            <span *ngIf="spinner" class="spinner-border spinner-border-sm"></span>
+            Submit</button>
+    </form>
+</div>

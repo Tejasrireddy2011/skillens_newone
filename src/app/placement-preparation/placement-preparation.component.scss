@@ -1,0 +1,25 @@
+.bt_ch {
+    color: #333333;
+}
+
+.bt_ch.active {
+    color: #b10dc9;
+    font-weight: 600;
+    background: none;
+    border: 2px dashed #b10dc9;
+    border-radius: 27px;
+}
+
+.accordion-button {
+   // background-image: linear-gradient(to right, orange 0%, rgb(182, 124, 18) 51%, rgb(240, 203, 135) 100%);
+    background-image: linear-gradient(to right, #b10dc9 0%, #e65cfb 51%, #ebc1f1 100%);
+    color: #fff;
+}
+
+.work_ul li {
+    list-style: none;
+}
+
+.p-3 {
+    padding-top: 0px !important;
+}

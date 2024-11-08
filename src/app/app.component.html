@@ -1,0 +1,10 @@
+<!-- <div class="preloader-area">
+    <div class="lds-hourglass"></div>
+</div> -->
+<app-site-header *ngIf="!(location == '/coming-soon')"></app-site-header>
+<router-outlet></router-outlet>
+<app-site-footer *ngIf="!(location == '/coming-soon')"></app-site-footer>
+
+<!-- <app-header *ngIf="!(location == '/coming-soon')"></app-header>
+<router-outlet></router-outlet>
+<app-footer *ngIf="!(location == '/coming-soon')"></app-footer> -->

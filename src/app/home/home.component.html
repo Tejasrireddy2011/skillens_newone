@@ -1,0 +1,868 @@
+<section class="main-banner marketing-home">
+    <div class="container top_sec">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-6 ">
+                <div class="hero-content">
+                    <h1 style="color:#ff851b;">Great place to Unlearn!</h1> <br> <br>
+                    <h1 style="color: #b10dc9;"> Great place to Succeed!</h1>
+                    <br>
+                </div>
+                <div>
+                    <form name="contactForm" #contactForm="ngForm"
+                        (ngSubmit)="contactForm.valid && submitContact(contactForm)">
+                        <div class="row">
+                            <div class="col-sm-12 col-lg-3 mt-1">
+                                <input type="text" name="fullName" class="form-control form-control-sm"
+                                    #fullName="ngModel" [(ngModel)]="contactObj.fullName" required
+                                    placeholder="Full Name">
+                                <small
+                                    *ngIf="(fullName.invalid && contactForm.submitted) || (fullName.touched && fullName.invalid)">Full
+                                    Name is required</small>
+                            </div>
+                            <div class="col-sm-12 col-lg-4 mt-1">
+                                <input type="email" name="email" #email="ngModel" class="form-control form-control-sm "
+                                    [(ngModel)]="contactObj.email" required placeholder="Email">
+                                <small
+                                    *ngIf="(email.invalid && contactForm.submitted) || (email.touched && email.invalid)">
+                                    Email is required</small>
+                            </div>
+                            <div class="col-sm-12 col-lg-3 mt-1">
+                                <input type="text" name="mobile" #mobile="ngModel" class="form-control form-control-sm "
+                                    [(ngModel)]="contactObj.mobile" required appMobileValidator
+                                    placeholder="Phone Number">
+                                <small
+                                    *ngIf="(mobile.invalid && contactForm.submitted) || (mobile.touched && mobile.invalid)">
+                                    Mobile number is invalid</small>
+                            </div>
+                            <div class="col-sm-12 col-lg-2 mt-1">
+                                
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary btn_c">
+                                        <span *ngIf="spinner" class="spinner-border spinner-border-sm"></span>
+                                        Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-lg-6  new_card position-relative">
+                <img src="assets/images/SkillLens_left_student1.webp" class="student-img">
+            </div>
+        </div>
+
+        <div class="row mt-5 row_b">
+            <app-partner></app-partner>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Start Features Area -->
+<section class="features-area marketing-features choose_sec">
+    <div class="container">
+        <div class="section-title mtb">
+
+            <h2>Why Choose Us?</h2>
+            <div class="bar"></div>
+
+        </div>
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-lg-12 col-md-12">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4">
+                        <div class="single-holder-box">
+                            <img src="assets/images/SkillLens_Expert_Training.png" alt="SkillLens_Payment-img1">
+                            <h3>Training offered by Experts</h3>
+                            <!-- <p>Duis hendrerit eget dolor non lora pulvinar. In conse.</p> -->
+                        </div>
+
+                        <div class="single-holder-box mt-30">
+                            <img src="assets/images/SkillLens_Continuous_Assessment.png" alt="SkillLens_Payment-img2">
+                            <h3>Continuous Assessments</h3>
+                            <!-- <p>Duis hendrerit eget dolor non lora pulvinar. In conse.</p> -->
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="single-holder-box mt-50">
+                            <img src="assets/images/SkillLens_Mentorship.png" alt="SkillLens_Payment-img2">
+                            <h3>Mentorship</h3>
+                            <!-- <p>Duis hendrerit eget dolor non lora pulvinar. In conse.</p> -->
+                        </div>
+                        <div class="single-holder-box mt-30">
+                            <img src="assets/images/SkillLens_Placement_Support.png" alt="SkillLens_Payment-img2">
+                            <h3>Placement Support</h3>
+                            <!-- <p>Duis hendrerit eget dolor non lora pulvinar. In conse.</p> -->
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4">
+                        <div class="single-holder-box mt-100">
+                            <img src="assets/images/SkillLens_RealTime_Projects.png" alt="SkillLens_Payment-img3">
+                            <h3>Real Time Projects</h3>
+                            <!-- <p>Duis hendrerit eget dolor non lora pulvinar. In conse.</p> -->
+                        </div>
+
+                        <div class="single-holder-box mt-30">
+                            <img src="assets/images/SkillLens_Resume_Preparation.png" alt="SkillLens_Payment-img4">
+                            <h3>Resume Preparation</h3>
+                            <!-- <p>Duis hendrerit eget dolor non lora pulvinar. In conse.</p> -->
+                        </div>
+                        <!-- <div class="single-holder-box mt-30">
+                            <img src="assets/images/SkillLens_Payment-img4.webp" alt="SkillLens_Payment-img4">
+                            <h3>Interview Management</h3>
+                           
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-lg-5 col-md-12">
+                <div class="features-holder-content">
+                    <div class="section-title">
+                        <h2>We are driven by our results.</h2>
+                        <div class="bar"></div>
+                    </div>
+                    <p class="gis">To become successful in life, we need skills. The skills we acquire will decide over
+                        destiny. Employers / Entrepreneurs look for skilled people to manage and run their businesses.
+                        Many a time, we generally assume that knowledge helps us
+                        become successful and reach our goals. But, knowledge has to be transformed to skill to become
+                        successful and reach our goals. Knowledge comes from listening, watching or reading information
+                        and theoretical concepts. This knowledge
+                        helps us face situations (both job and life related). But, when we encounter a situation, we
+                        have to deal with the situation. The mechanism of applying our knowledge to deal with various
+                        situations we encounter requires "SKILL". Skill
+                        is applying our knowledge to situations.
+                    </p>
+                    <a routerLink="/about-us" class="btn btn-primary">About Us</a>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- <div class="features-inner-area ">
+        <div class="container">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-md-12 ">
+                    <div class="features-inner-content  justify-content-center align-items-center">
+                        <div class="features-item">
+                            <div class="icon">
+                                <i class="icofont-gift"></i>
+                            </div>
+                            <h3>Our Training Methodology</h3>
+                            <ul class="ul_list">
+                                <li class="single-box mb-1">Why Choose Us?</li>
+                                <li class="single-box mb-1">Training offered by Experts</li>
+                                <li class="single-box mb-1">Continuous Assessments</li>
+                                <li class="single-box mb-1">Mentorship</li>
+                                <li class="single-box mb-1">Real Time Projects</li>
+                                <li class="single-box mb-1">Resume Preparation</li>
+                                <li class="single-box mb-1">Interview Management</li>
+                                <li class="single-box">Placement Support</li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                    <div class="features-image">
+                        <img src="assets/images/SkillLens_Screenshot.webp" alt="SkillLens_Screenshot.webp">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+</section>
+<!-- End Features Area -->
+
+<!-- Start Services Area -->
+<section class="services-area ptb-100 bg-gray mt-3">
+    <div class="container">
+        <div class="section-title">
+
+            <h2>Our Trainings</h2>
+            <div class="bar"></div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 ">
+                <div class="single-services">
+                    <a routerLink="/dotnet" class="">
+                        <div class="icon">
+                            <!-- <i class="icofont-pay"></i> -->
+                            <img src="assets/images/SkillLens_.Net_Logo.webp" />
+                        </div>
+                        <h3>.NET Full Stack</h3>
+                        <!-- <p>Well at public scho cheeky bugger grub burke.</p> -->
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-3 ">
+                <div class="single-services">
+                    <a routerLink="/java" class="">
+                        <div class="icon">
+                            <!-- <i class="icofont-optic"></i> -->
+                            <img src="assets/images/SkillLens_Java_Logo.webp" />
+                        </div>
+                        <h3>Java Full Stack</h3>
+                        <!-- <p>Well at public scho cheeky bugger grub burke.</p> -->
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3">
+                <div class="single-services">
+                    <a routerLink="/python" class="">
+                        <div class="icon">
+                            <!-- <i class="icofont-pie-chart"></i> -->
+                            <img src="assets/images/SkillLens_Python_Logo.webp" />
+                        </div>
+                        <h3>Python Full Stack</h3>
+                        <!-- <p>Well at public scho cheeky bugger grub burke.</p> -->
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="single-services">
+                    <a routerLink="/webdevelopment-angular">
+                        <div class="icon">
+                            <!-- <i class="icofont-music-note"></i> -->
+                            <img src="assets/images/SkillLens_HTML_Logo.webp" />
+                        </div>
+
+                        <h3>FrontEnd - Angular</h3>
+                    </a>
+                    <!-- <p>Well at public scho cheeky bugger grub burke.</p> -->
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="single-services">
+                    <a routerLink="/digital-marketing">
+                        <div class="icon">
+                            <!-- <i class="icofont-deviantart"></i> -->
+                            <img src="assets/images/SkillLens_Digital_Markting_Logo.webp" />
+                        </div>
+                        <h3>Digital Marketing</h3>
+                    </a>
+                    <!-- <p>Well at public scho cheeky bugger grub burke.</p> -->
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="single-services">
+                    <a routerLink="/testing" class="">
+                        <div class="icon">
+                            <!-- <i class="icofont-chart-pie-alt"></i> -->
+                            <img src="assets/images/SkillLens_Testing_Logo.webp" />
+                        </div>
+                        <h3>Software Testing </h3>
+                        <!-- <p>Well at public scho cheeky bugger grub burke.</p> -->
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="single-services">
+                    <a routerLink="/webdevelopment-reactjs" class="">
+                        <div class="icon">
+                            <!-- <i class="icofont-chart-pie-alt"></i> -->
+                            <img src="assets/images/SkillLens_reactjs.png" />
+                        </div>
+                        <h3>FrontEnd - React JS</h3>
+                        <!-- <p>Well at public scho cheeky bugger grub burke.</p> -->
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="single-services">
+                    <a routerLink="/sql-server" class="">
+                        <div class="icon">
+                            <!-- <i class="icofont-chart-pie-alt"></i> -->
+                            <img src="assets/images/SkillLens_sql-server.png" />
+                        </div>
+                        <h3>Database - SQL Server </h3>
+                        <!-- <p>Well at public scho cheeky bugger grub burke.</p> -->
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="single-services">
+                    <a routerLink="/oracle" class="">
+                        <div class="icon">
+                            <!-- <i class="icofont-chart-pie-alt"></i> -->
+                            <img src="assets/images/SkillLens_Oracle_Logo.png" />
+                        </div>
+                        <h3>Database - Oracle </h3>
+                        <!-- <p>Well at public scho cheeky bugger grub burke.</p> -->
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="single-services">
+                    <a routerLink="/aws" class="">
+                        <div class="icon">
+                            <!-- <i class="icofont-chart-pie-alt"></i> -->
+                            <img src="assets/images/SkillLens_aws.png" />
+                        </div>
+                        <h3>AWS</h3>
+                        <!-- <p>Well at public scho cheeky bugger grub burke.</p> -->
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="single-services">
+                    <a routerLink="/hr-training" class="hr-training">
+                        <div class="icon">
+                            <!-- <i class="icofont-chart-pie-alt"></i> -->
+                            <img src="assets/images/SkillLens_HR_Logo.jpg" />
+                        </div>
+                        <h3>HR Training</h3>
+                        <!-- <p>Well at public scho cheeky bugger grub burke.</p> -->
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="single-services">
+                    <a routerLink="/tableau" class="tableau">
+                        <div class="icon">
+                            <!-- <i class="icofont-chart-pie-alt"></i> -->
+                            <img src="assets/images/SkillLens_Tableau-Symbol.png" />
+                        </div>
+                        <h3>Tableau</h3>
+                        <!-- <p>Well at public scho cheeky bugger grub burke.</p> -->
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Services Area -->
+
+<!-- Start Overview Area -->
+<!-- <section class="overview-section ptb-100 d-none">
+    <div class="container">
+        <div class="overview-box">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-lg-6 col-md-6 overview-img">
+                    <img src="assets/images/SkillLens_WorkShop.webp" alt="SkillLens_WorkShop">
+                </div>
+
+                <div class="col-lg-6 col-md-6 overview-content">
+                    <div class="icon">
+                        <i class="icofont-power"></i>
+                    </div>
+                    <h3>Social Media Marketing</h3>
+                    <p>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus
+                        in on anything form a single project to an individual person's workload.</p>
+                    <ul>
+                        <li>Unimited Video Call</li>
+                        <li>Add Favourite contact</li>
+                        <li>Camera Filter</li>
+                    </ul>
+                    <a routerLink="/" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="overview-box">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-lg-6 col-md-6 overview-content">
+                    <div class="icon">
+                        <i class="icofont-share-alt"></i>
+                    </div>
+                    <h3>Email Marketing</h3>
+                    <p>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus
+                        in on anything form a single project to an individual person's workload.</p>
+                    <ul>
+                        <li>Unimited Video Call</li>
+                        <li>Add Favourite contact</li>
+                        <li>Camera Filter</li>
+                    </ul>
+                    <a routerLink="/" class="btn btn-primary">Read More</a>
+                </div>
+
+                <div class="col-lg-6 col-md-6 overview-img">
+                    <img src="assets/images/SkillLens_Marketing-2.webp" alt="SkillLens_Marketing-2">
+                </div>
+            </div>
+        </div>
+
+        <div class="overview-box">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-lg-6 col-md-6 overview-img">
+                    <img src="assets/images/SkillLens_Marketing.webp" alt="SkillLens_Marketing">
+                </div>
+
+                <div class="col-lg-6 col-md-6 overview-content">
+                    <div class="icon">
+                        <i class="icofont-ui-messaging"></i>
+                    </div>
+                    <h3>Paid Advertising</h3>
+                    <p>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus
+                        in on anything form a single project to an individual person's workload.</p>
+                    <ul>
+                        <li>Unimited Video Call</li>
+                        <li>Add Favourite contact</li>
+                        <li>Camera Filter</li>
+                    </ul>
+                    <a routerLink="/" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="overview-box">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-lg-6 col-md-6 overview-content">
+                    <div class="icon">
+                        <i class="icofont-users-social"></i>
+                    </div>
+                    <h3>We provide proffesional staff</h3>
+                    <p>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus
+                        in on anything form a single project to an individual person's workload.</p>
+                    <ul>
+                        <li>Unimited Video Call</li>
+                        <li>Add Favourite contact</li>
+                        <li>Camera Filter</li>
+                    </ul>
+                    <a routerLink="/" class="btn btn-primary">Read More</a>
+                </div>
+
+                <div class="col-lg-6 col-md-6 overview-img">
+                    <img src="assets/images/SkillLens_WorkShop.webp" alt="SkillLens_WorkShop">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section> -->
+<!-- End Overview Area -->
+
+<!-- Start Join Area -->
+<!-- <section class="join-area ptb-100 d-none">
+    <div class="container">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-lg-6 col-md-6">
+                <div class="join-img">
+                    <img src="assets/images/SkillLens_WorkShop.webp" alt="SkillLens_WorkShop">
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+                <div class="join-content">
+                    <span>Start 30 Days Free Trial</span>
+                    <h3>Overall 400k+ Our Clients! Please Get Start Now</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo.</p>
+                    <a routerLink="/contact-us" class="btn btn-primary">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<!-- End Join Area -->
+
+<!-- Start Analysis Area -->
+<section class="analysis-area ptb-100">
+    <div class="container">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="analysis-form">
+                    <h3>Talk To Us!</h3>
+
+                    <form name="contactForm" #contactForm="ngForm"
+                        (ngSubmit)="contactForm.valid && submitContact(contactForm)">
+                        <div class="form-group">
+                            <input type="text" name="fullName" class="form-control" #fullName="ngModel"
+                                [(ngModel)]="contactObj.fullName" required placeholder="Name">
+                            <small
+                                *ngIf="(fullName.invalid && contactForm.submitted) || (fullName.touched && fullName.invalid)">Full
+                                Name is required</small>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" name="email" #email="ngModel" class="form-control"
+                                [(ngModel)]="contactObj.email" required placeholder="Email">
+                            <small *ngIf="(email.invalid && contactForm.submitted) || (email.touched && email.invalid)">
+                                Email is required</small>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="mobile" #mobile="ngModel" class="form-control"
+                                [(ngModel)]="contactObj.mobile" required appMobileValidator placeholder="Phone">
+                            <small
+                                *ngIf="(mobile.invalid && contactForm.submitted) || (mobile.touched && mobile.invalid)">
+                                Mobile number is invalid</small>
+                        </div>
+
+
+                        <div class="form-check">
+                            <input class="form-check-input" name="agreeStatus1" type="checkbox" value=""
+                                id="flexCheckChecked" [(ngModel)]="agreeStatus">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                <p class="gis"> I agree to the Terms & Conditions of "Skill Lens" and give
+                                    acceptance for the
+                                    "Team - Skill Lens" to reach me over Call, SMS, WhatsApp, Email.</p>
+                            </label>
+                        </div>
+
+                        <button type="submit" [disabled]="!agreeStatus" class="btn btn-primary">
+                            <span *ngIf="spinner" class="spinner-border spinner-border-sm"></span>
+                            Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+                <div class="analysis-text">
+                    <img src="assets/images/SkillLens_New-men.webp" class="" alt="SkillLens_New-men" height="80%"
+                        width="90%">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Analysis Area -->
+
+
+
+<!-- Start Team Area -->
+
+
+<!-- End Team Area -->
+<section class="pricing-area ptb-100">
+    <div class="offer ">
+
+        <h1 class="text-center"><span class="heading">Our Key Highlights </span></h1>
+        <div class="bar"></div>
+
+        <br>
+        <div class="container">
+            <div class="row ">
+
+                <div class="col-lg-4 col-md-6 ">
+                    <div class="skills ">
+
+                        <h5><img src="assets/images/SkillLens_Basic.jpeg " alt="e-learning-icon" height="20px"
+                                width="17px"> <span class="ml">Basic</span>
+                        </h5>
+                        <ul>
+                            <li>If you are pursuing your academics.</li>
+                            <li>If you want to learn technology and complete your academic projects.</li>
+                            <li>If you are an employee and want to migrate to new technology.</li>
+                            <li>B.E/B.Tech/M.E/M.Tech/Any Degree (Year of Pass does not matter).</li>
+                            <li>Technical Training</li>
+                            <li>Internship Opportunities</li>
+                        </ul>
+                        <a class="sign-p" routerLink="/join-now">JOIN NOW</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 ">
+                    <div class="skills ">
+
+                        <h5><img src="assets/images/SkillLens_Advan.jpeg " alt="e-assessment-icon" height="27px"
+                                width="25px"> <span class="ml">Advanced</span></h5>
+                        <ul>
+                            <li>If you are a graduate and looking for a internship.</li>
+                            <li>If you are a graduate and looking for a Job.</li>
+                            <li>If you are working in a non-technical field & want to move to Software job.</li>
+                            <li>B.E/B.Tech/M.E/M.Tech/Any Degree (2020,2021,2022 & 2023 Pass out students).</li>
+                            <li>Technical Training, Mentor support</li>
+                            <li>Mock Interviews, Resume Building</li>
+                            <li>Live Project, Job Assistance</li>
+                        </ul>
+                        <a class="sign-p " routerLink="/join-now">JOIN NOW</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 ">
+                    <div class="skills">
+
+                        <h5><img src="assets/images/SkillLens_Professional1.jpeg" alt="industry-connect-icon"
+                                height="29px" width="34px"> <span class="ml">Professional</span></h5>
+                        <ul>
+                            <li>If you are passionate to learn technology.</li>
+                            <li>If you want to become expert with the technology.</li>
+                            <li>If you want to start a career.</li>
+                            <li>B.E/B.Tech/M.E/M.Tech/Any Degree (2020,2021,2022 & 2023 Pass out students).</li>
+                            <li>Technical Training</li>
+                            <li> 1:1 Mentor support</li>
+                            <li>Live Project</li>
+                            <li>Aptitude & Reasoning Sessions, Resume Building</li>
+                            <li>Mock Interviews</li>
+                            <li>100% Job Guarantee</li>
+                        </ul>
+                        <a class="sign-p" routerLink="/join-now">JOIN NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="counter ">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-8 ">
+                <h1 class="text-center"><span class="heading">Our Reach</span></h1>
+                <div class="bar"></div>
+                <br>
+                <div class="container ">
+                    <div class="row ">
+                        <div class="col-xs-12 col-lg-6 col-md-6 ">
+                            <div class="text-center counte1 ">
+                                <div class="fun-fact__count ">11763</div>
+                                <span class="fun-cfact__title ">No. of Subscribers</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-lg-6 col-md-6 ">
+                            <div class="text-center count1 ">
+                                <div class="fun-fact__count ">26251</div>
+                                <span class="fun-fact__title ">No. of Assessments</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-xs-12 col-lg-6 col-md-6 ">
+                            <div class="text-center counte1 ">
+                                <div class="fun-fact__count ">117</div>
+                                <a class="fun-fact__title " [routerLink]="['/colleges']"
+                                    routerLinkActive="router-link-active">No. of
+                                    Colleges</a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-lg-6 col-md-6 ">
+                            <div class="text-center count1 ">
+                                <div class="fun-fact__count ">256260</div>
+                                <span class="fun-fact__title ">No. of Views</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <img src="assets/images/SkillLens_reach.gif " class="img-fluid reach" alt="reach ">
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<!-- Start Pricing Area -->
+<section class="pricing-area" style="z-index: 0;">
+    <div class="container">
+        <div class="section-title">
+            <!-- <h2>Our Training Offerings</h2>
+            <div class="bar"></div> -->
+            <p><b> &nbsp;</b></p>
+        </div>
+
+
+    </div>
+</section>
+<!-- End Pricing Area -->
+
+
+
+<!-- Start Feedback Area -->
+<!-- <section class="feedback-area ptb-100">
+    <div class="container">
+        <div class="section-title">
+            <h2>Testimonials</h2>
+            <div class="bar"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+        </div>
+
+        <div class="feedback-slides owl-carousel owl-theme">
+            <div class="single-feedback-box">
+                <div class="client-info">
+                    <img src="assets/Images_jpg/client1.jpg" alt="client">
+                    <h3>Tulasi Konatham</h3>
+                    <span>Web Developer</span>
+                </div>
+                <p class="">The best institute with best experienced faculty and with low fees in Hyderabad. they give
+                    real time project experience even. They maintain good quality of education.</p>
+            </div>
+
+            <div class="single-feedback-box">
+                <div class="client-info">
+                    <img src="assets/Images_jpg/client2.jpg" alt="client">
+                    <h3>Sharanya Peddi</h3>
+                    <span>SEO Expert</span>
+                </div>
+                <p>iam happyto learn 'C' language at GOODRICH IT SOLUTION. .Convenient timings,limited learners for a
+                    batch if u could ask me i would surely suggest GOODRICH</p>
+            </div>
+
+            <div class="single-feedback-box">
+                <div class="client-info">
+                    <img src="assets/Images_jpg/client3.jpg" alt="client">
+                    <h3>Bheemavarapu Reddy</h3>
+                    <span>Web Developer</span>
+                </div>
+                <p>This is a great institute for beginners and advanced students, these are faculties lot of patience,
+                    after finishing the course i went to them 4 times for doubts and they have clarified my doubts
+                    without feeling inconvenience and they said "come to us any times if you have any further doubts".
+                </p>
+            </div>
+
+            <div class="single-feedback-box">
+                <div class="client-info">
+                    <img src="assets/Images_jpg/client4.jpg" alt="client">
+                    <h3>Chaitanya Kumar</h3>
+                    <span>Web Developer</span>
+                </div>
+                <p>Goodrich Is an extraordinary institute. i learnt soo much from this institute. i became expert in ms
+                    office, java, c, c++ by taking training here
+                    Director Satish garu Is expertised faculty since 17 years explained the subject elobaratedly</p>
+            </div>
+        </div>
+    </div>
+
+    <svg class="svg-feedback-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
+        preserveAspectRatio="none">
+        <path d="M0,70 C30,130 70,50 100,70 L100,100 0,100 Z" fill="#ffffff" />
+    </svg>
+</section> -->
+<!-- End Feedback Area -->
+
+<!-- Start Get Started Area -->
+<section class="get-started  bg-gray d-none">
+    <div class="container">
+        <div class="section-title">
+            <h2>Get Started Free</h2>
+            <div class="bar"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+        </div>
+
+        <div class="get-started-form">
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Name">
+                </div>
+
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email">
+                </div>
+
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+                <p>or use your <a href="#">Facebook Account</a></p>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- <div id="myModal" class="modal fade">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+  
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" (click)="closeModal()">&times;</button>
+          <a [routerLink]="" (click)="gotoCart()" data-dismiss="modal"> <img src="assets/images/SkillLens_Book-banner.webp"
+              class="img-fluid" alt="offer-image"></a>
+        </div>
+      </div>
+    </div>
+</div> -->
+<!-- End Get Started Area -->
+<div class="modal fade mt-5 pt-5" id="myModal" tabindex="-1" aria-labelledby="myModal" aria-hidden="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-danger" id="myModal">Login Form</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    (click)="closeModal()"></button>
+            </div>
+            <div class="modal-body">
+
+                <form name="contactForm" #contactForm="ngForm"
+                    (ngSubmit)="contactForm.valid && submitContact(contactForm)">
+                    <div class="mb-3">
+                        <input type="text" name="fullName" class="form-control" #fullName="ngModel"
+                            [(ngModel)]="contactObj.fullName" required placeholder="Name">
+                        <small
+                            *ngIf="(fullName.invalid && contactForm.submitted) || (fullName.touched && fullName.invalid)">Full
+                            Name is required</small>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" name="email" #email="ngModel" class="form-control"
+                            [(ngModel)]="contactObj.email" required placeholder="Email">
+                        <small *ngIf="(email.invalid && contactForm.submitted) || (email.touched && email.invalid)">
+                            Email is required</small>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" name="mobile" #mobile="ngModel" class="form-control"
+                            [(ngModel)]="contactObj.mobile" required placeholder="Phone" appMobileValidator>
+                        <small *ngIf="(mobile.invalid && contactForm.submitted) || (mobile.touched && mobile.invalid)">
+                            Mobile number is invalid</small>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <span *ngIf="spinner" class="spinner-border spinner-border-sm"></span>
+                        Submit</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-bs-dismiss="modal"
+                    (click)="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Start Platform Connect -->
+<section class="platform-connect mb-5">
+    <app-social-media-links></app-social-media-links>
+</section>
+
+<!-- End Platform Connect -->
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div> -->
